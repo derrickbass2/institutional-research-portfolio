@@ -7,3 +7,20 @@ authors:
     given-names: Derrick
 repository-code: "https://github.com/derrickbass2/institutional-research-portfolio"
 license: MIT
+
+references:
+  - type: dataset
+    title: "California Community Colleges Data Mart"
+    publisher: "California Community Colleges Chancellor's Office"
+    url: "https://datamart.cccco.edu/"
+    note: "Data used in selected projects within this repository are publicly available from the California Community Colleges Data Mart (2019–2023 extracts). Users should cite the original data source in accordance with CCCCO data use guidance."
+
+preferred-citation:
+  type: software
+  authors:
+    - family-names: Bass
+      given-names: Derrick
+  title: "Institutional Research Portfolio"
+  year: 2026
+  url: "https://github.com/derrickbass2/institutional-research-portfolio"
+  note: "Includes analyses utilizing publicly available data from the California Community Colleges Data Mart."
