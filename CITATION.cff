@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Institutional Research Portfolio"
+message: "If you use this repository, please cite it."
+type: software
+authors:
+  - family-names: Bass
+    given-names: Derrick
+repository-code: "https://github.com/derrickbass2/institutional-research-portfolio"
+license: MIT

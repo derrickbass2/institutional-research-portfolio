@@ -47,3 +47,33 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# macOS
+.DS_Store
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Data (do not commit raw datasets unless redistribution is explicitly permitted)
+data/
+**/data/
+**/raw_data/
+**/*.csv
+**/*.xlsx
+**/*.sav
+**/*.dta
+
+# Outputs (keep repo light; commit only final selected artifacts if needed)
+**/outputs/*.html
+**/outputs/*.pptx
+**/outputs/*.docx
+**/outputs/*.pdf
+
+# Temp / logs
+*.log
+~$*.docx
+~$*.xlsx
+.Rprofile
