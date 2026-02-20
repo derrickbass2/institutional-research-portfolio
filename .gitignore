@@ -77,3 +77,9 @@ data/
 ~$*.docx
 ~$*.xlsx
 .Rprofile
+
+# Local data (do not commit)
+projects/**/data/*.csv
+
+# Generated outputs (do not commit by default)
+projects/**/outputs/*
