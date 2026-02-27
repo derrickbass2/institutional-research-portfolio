@@ -22,7 +22,7 @@ All projects prioritize methodological rigor, interpretability, and institutiona
 
 ## Repository Structure
 
-```
+```text
 institutional-research-portfolio/
 │
 ├── projects/
@@ -47,6 +47,7 @@ institutional-research-portfolio/
 ## Current Project
 
 ### 1. Institutional Characteristics and Student Success Outcomes
+
 **Dataset:** California Community Colleges (2019–2023)
 **Outcome Variable:** Fall-to-Fall Persistence
 **Design:** Cross-sectional institutional-level regression modeling
@@ -55,6 +56,7 @@ institutional-research-portfolio/
 Which institutional-level characteristics are associated with variation in first-year retention rates across California community colleges?
 
 **Predictors (Institution-Level):**
+
 - Percentage of Pell recipients
 - Enrollment size
 - Percentage of part-time students
@@ -122,5 +124,5 @@ All analyses adhere to:
 ## Contact
 
 Derrick Bass
-derrick.bass2@gmail.com
+<derrick.bass2@gmail.com>
 LinkedIn: linkedin.com/in/derrickbass2
