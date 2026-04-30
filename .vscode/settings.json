@@ -2,5 +2,17 @@
   "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "r.alwaysUseActiveTerminal": true
+  "r.alwaysUseActiveTerminal": true,
+  "cSpell.words": [
+    "CCCCO",
+    "covariates",
+    "IPEDS",
+    "lmtest",
+    "Missingness",
+    "Multicollinearity",
+    "NCES",
+    "postsecondary",
+    "readr",
+    "tidyverse"
+  ]
 }
