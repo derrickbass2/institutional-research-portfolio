@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 02 | AI Workflow Optimization</title>
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --surface: #151518;
+      --surface-2: #1a1a1d;
+      --text: #f9f9f9;
+      --muted: #b2b2b6;
+      --chartreuse: #77ff00;
+      --lavender: #d6a7ff;
+      --electric: #6faeff;
+      --divider: #2c2c2e;
+      --shadow: 0 24px 80px rgba(0,0,0,.45);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(119,255,0,.18), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(214,167,255,.16), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(111,174,255,.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+
+    .eyebrow {
+      color: var(--chartreuse);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      max-width: 900px;
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      line-height: .95;
+      letter-spacing: -0.07em;
+      margin: 16px 0 24px;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      align-content: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 48px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(26,26,29,.94), rgba(21,21,24,.82));
+      border: 1px solid var(--divider);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(119,255,0,.08), transparent 40%, rgba(214,167,255,.08));
+      opacity: .8;
+      pointer-events: none;
+    }
+
+    .card > * { position: relative; }
+
+    .wide { grid-column: span 7; }
+    .side { grid-column: span 5; }
+    .full { grid-column: span 12; }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      color: var(--lavender);
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li { margin: 8px 0; }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .metric {
+      padding: 20px;
+      border: 1px solid var(--divider);
+      border-radius: 22px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--chartreuse);
+      line-height: 1;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .node {
+      border: 1px solid rgba(214,167,255,.35);
+      border-radius: 20px;
+      padding: 18px;
+      min-height: 120px;
+      background: rgba(214,167,255,.055);
+    }
+
+    .node span {
+      display: block;
+      color: var(--chartreuse);
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: var(--chartreuse);
+      color: #101010;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 0 34px rgba(119,255,0,.22);
+    }
+
+    footer {
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: .92rem;
+      border-top: 1px solid var(--divider);
+      padding-top: 24px;
+    }
+
+    @media (max-width: 820px) {
+      .wide, .side, .full { grid-column: span 12; }
+      .metric-row, .flow { grid-template-columns: 1fr; }
+      .hero { min-height: 0; padding-top: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Adaptive Data Fusion · Project 02</div>
+      <h1>AI Workflow Optimization: Before → After</h1>
+      <p class="lead">
+        A cinematic case study showing how unstructured AI use can be transformed into a repeatable productivity system that reduces friction, improves output quality, and saves measurable time.
+      </p>
+      <a class="cta" href="../03_ai_workflow_setup/index.html">View Workflow Setup →</a>
+    </section>
+
+    <section class="grid">
+      <article class="card wide">
+        <h2>The Before State</h2>
+        <p>AI was available, but the workflow was fragmented. Outputs required heavy rework, prompts were inconsistent, and the user had no repeatable system.</p>
+        <ul>
+          <li>Unstructured prompting</li>
+          <li>Inconsistent output quality</li>
+          <li>High cognitive load</li>
+          <li>Manual rewriting after each AI response</li>
+        </ul>
+      </article>
+
+      <article class="card side">
+        <h2>Core Problem</h2>
+        <p>
+          The barrier was not tool access. The barrier was behavioral workflow design: the user lacked a structured interaction model for getting consistent value from AI.
+        </p>
+      </article>
+
+      <article class="card full">
+        <h2>Before → After Metrics</h2>
+        <div class="metric-row">
+          <div class="metric">
+            <strong>2 hrs</strong>
+            Original task time
+          </div>
+          <div class="metric">
+            <strong>15–20 min</strong>
+            Optimized workflow time
+          </div>
+          <div class="metric">
+            <strong>Repeatable</strong>
+            Final system outcome
+          </div>
+        </div>
+      </article>
+
+      <article class="card full">
+        <h2>The Transformation Flow</h2>
+        <div class="flow">
+          <div class="node"><span>01</span>Diagnose friction in current AI use</div>
+          <div class="node"><span>02</span>Convert vague tasks into structured inputs</div>
+          <div class="node"><span>03</span>Create reusable prompt templates</div>
+          <div class="node"><span>04</span>Refine into a repeatable workflow</div>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>The After State</h2>
+        <ul>
+          <li>Reusable prompts for recurring work</li>
+          <li>Clear output expectations</li>
+          <li>Less trial-and-error prompting</li>
+          <li>Faster task completion with stronger consistency</li>
+        </ul>
+      </article>
+
+      <article class="card side">
+        <h2>Client Value</h2>
+        <p>
+          This project demonstrates how Adaptive Data Fusion translates behavioral science into practical AI enablement: not just better prompts, but better human-AI workflows.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      Adaptive Data Fusion · Human-Centered AI Enablement for Organizational Adoption
+    </footer>
+  </main>
+</body>
+</html>

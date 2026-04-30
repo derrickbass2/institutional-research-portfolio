@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 03 | AI Workflow Setup</title>
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --surface: #151518;
+      --surface-2: #1a1a1d;
+      --text: #f9f9f9;
+      --muted: #b2b2b6;
+      --chartreuse: #77ff00;
+      --lavender: #d6a7ff;
+      --electric: #6faeff;
+      --divider: #2c2c2e;
+      --shadow: 0 24px 80px rgba(0,0,0,.45);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(111,174,255,.18), transparent 28%),
+        radial-gradient(circle at 90% 30%, rgba(119,255,0,.14), transparent 28%),
+        radial-gradient(circle at 40% 90%, rgba(214,167,255,.13), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+
+    .eyebrow {
+      color: var(--electric);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      max-width: 940px;
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      line-height: .95;
+      letter-spacing: -0.07em;
+      margin: 16px 0 24px;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      align-content: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 48px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(26,26,29,.94), rgba(21,21,24,.82));
+      border: 1px solid var(--divider);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(111,174,255,.08), transparent 42%, rgba(119,255,0,.08));
+      pointer-events: none;
+    }
+
+    .card > * { position: relative; }
+
+    .wide { grid-column: span 7; }
+    .side { grid-column: span 5; }
+    .full { grid-column: span 12; }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+    }
+
+    p, li { color: var(--muted); }
+
+    ul { padding-left: 20px; }
+
+    li { margin: 8px 0; }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .step {
+      min-height: 150px;
+      border-radius: 22px;
+      border: 1px solid rgba(111,174,255,.35);
+      background: rgba(111,174,255,.055);
+      padding: 18px;
+    }
+
+    .step strong {
+      display: block;
+      color: var(--chartreuse);
+      margin-bottom: 10px;
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      border: 1px solid rgba(214,167,255,.35);
+      color: var(--text);
+      background: rgba(214,167,255,.07);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: .92rem;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: var(--chartreuse);
+      color: #101010;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 0 34px rgba(119,255,0,.22);
+    }
+
+    footer {
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: .92rem;
+      border-top: 1px solid var(--divider);
+      padding-top: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .wide, .side, .full { grid-column: span 12; }
+      .workflow { grid-template-columns: 1fr; }
+      .hero { padding-top: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Adaptive Data Fusion · Project 03</div>
+      <h1>AI Workflow Setup & Implementation</h1>
+      <p class="lead">
+        A practical implementation case showing how to convert scattered AI usage into a clean, repeatable workflow that supports productivity, clarity, and consistent execution.
+      </p>
+      <a class="cta" href="../02_ai_workflow_before_after/index.html">View Before → After Case →</a>
+    </section>
+
+    <section class="grid">
+      <article class="card wide">
+        <h2>Objective</h2>
+        <p>
+          Design a simple AI workflow that helps non-technical users produce stronger outputs faster without needing advanced automation infrastructure.
+        </p>
+        <ul>
+          <li>Reduce trial-and-error prompting</li>
+          <li>Create reusable prompt structures</li>
+          <li>Improve consistency across repeated tasks</li>
+          <li>Make AI easier to use in daily work</li>
+        </ul>
+      </article>
+
+      <article class="card side">
+        <h2>Service Focus</h2>
+        <p>
+          This is the exact foundation of the 45-minute AI Help & Automation Setup session: diagnose one workflow, structure it, and leave the client with something usable.
+        </p>
+      </article>
+
+      <article class="card full">
+        <h2>Workflow Architecture</h2>
+        <div class="workflow">
+          <div class="step"><strong>Input</strong>User brings a task, draft, process, or recurring problem.</div>
+          <div class="step"><strong>Structure</strong>The task is converted into a clear prompt framework.</div>
+          <div class="step"><strong>Generate</strong>AI produces a usable first-pass output.</div>
+          <div class="step"><strong>Refine</strong>The output is improved through a controlled feedback loop.</div>
+          <div class="step"><strong>Reuse</strong>The final workflow becomes a repeatable system.</div>
+        </div>
+      </article>
+
+      <article class="card side">
+        <h2>Tools</h2>
+        <div class="pill-row">
+          <span class="pill">ChatGPT</span>
+          <span class="pill">Prompt Templates</span>
+          <span class="pill">Custom Instructions</span>
+          <span class="pill">Workflow Mapping</span>
+          <span class="pill">Google Docs</span>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Example Use Cases</h2>
+        <ul>
+          <li>Email drafting and refinement</li>
+          <li>Content planning and post generation</li>
+          <li>Meeting summaries and task extraction</li>
+          <li>Client response templates</li>
+          <li>Simple business workflow documentation</li>
+        </ul>
+      </article>
+
+      <article class="card full">
+        <h2>Key Insight</h2>
+        <p>
+          Effective AI use does not begin with complex automation. It begins with structured interaction: clear inputs, explicit outputs, repeatable steps, and behavioral fit.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      Adaptive Data Fusion · AI Adoption Intelligence · Human-Centered Workflow Enablement
+    </footer>
+  </main>
+</body>
+</html>

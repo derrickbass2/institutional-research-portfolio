@@ -1,11 +1,13 @@
 # Project 02 — AI Workflow Optimization (Before → After)
 
 ## Overview
+
 This case study demonstrates how a fragmented, inefficient AI usage pattern was transformed into a structured, repeatable workflow that significantly improved productivity and output quality.
 
 ---
 
 ## Problem (Before)
+
 - AI tools were used inconsistently across tasks
 - Prompts were unstructured and produced unreliable results
 - Tasks such as writing emails and content required extensive manual editing
@@ -14,7 +16,9 @@ This case study demonstrates how a fragmented, inefficient AI usage pattern was 
 ---
 
 ## Intervention
+
 A human-centered AI optimization approach was applied:
+
 - Standardized prompt structures
 - Introduced reusable templates
 - Simplified workflow into repeatable steps
@@ -23,6 +27,7 @@ A human-centered AI optimization approach was applied:
 ---
 
 ## Outcome (After)
+
 - Task completion reduced from ~2 hours → ~15–20 minutes
 - Output quality became consistent and reusable
 - Reduced friction and increased confidence in AI usage
@@ -31,6 +36,7 @@ A human-centered AI optimization approach was applied:
 ---
 
 ## Key Insight
+
 AI adoption failures are rarely due to the technology itself.
 They emerge from misaligned workflows and lack of behavioral integration.
 
